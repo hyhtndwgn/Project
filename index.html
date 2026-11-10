@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web đầu tiên</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            color: #1a73e8;
+            margin-top: 0;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #1a73e8;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background-color: #1557b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Chào mừng! 👋</h1>
+        <p>Đây là trang web đầu tiên của tôi được lưu trữ hoàn toàn miễn phí trên GitHub Pages.</p>
+        <button onclick="thayDoiMau()">Thử đổi màu nền</button>
+    </div>
+
+    <script>
+        function thayDoiMau() {
+            const colors = ['#f0f2f5', '#e8f0fe', '#fce8e6', '#e6f4ea', '#fef7e0'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
